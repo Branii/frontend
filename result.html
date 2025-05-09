@@ -23,9 +23,9 @@
         background: rgba(255, 255, 255, 0.1); /* or use rgba(0, 0, 0, 0.2) for darker glass */
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px); /* for Safari */
-        border-radius: 10px;
+      
         border: 1px solid rgba(255, 255, 255, 0.2);
-        padding: 1rem;
+
       }
       .accheaderrows{
         background-color: #fff;
@@ -71,7 +71,6 @@
       .menu {
         display: flex;
         flex-direction: column;
-        background-color: var(--color-bg-secondary);
         border-radius: 0px;
         height: 500px;
         border: solid 1px #eee;
@@ -84,10 +83,7 @@
         display: block;
         width: 100%;
         padding: 8px;
-    
-        &+.menu-list {
-          border-top: 1px solid #ddd;
-        }
+        
       }
     
       .menu-sub-list {
@@ -176,21 +172,26 @@
     <main class="main" id="top">
 
       <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll" style="background-color: #fff;box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
-        <div class="container"><a class="navbar-brand" href="#"><img src="assets/img/icons/logo.png" alt="" width="30" /><span class="text-1000 fs-1 ms-2 fw-mediu        <div class="container"><a class="navbar-brand" href="index.html"><img src="assets/img/icons/logo.png" alt="" width="30" /><span class="text-1000 fs-1 ms-2 fw-medium">1Kball<span class="fw-bold"> Lottery</span></span></a>
+        <div class="container"><a class="navbar-brand" href="index.html"><img src="assets/img/icons/logo.png" alt="" width="30" /><span class="text-1000 fs-1 ms-2 fw-medium">1Kball<span class="fw-bold"> Lottery</span></span></a>
           <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto border-bottom border-lg-bottom-0 pt-2 pt-lg-0">
-              <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link active active" aria-current="page" href="#">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="products.html">Products </a></li>
-              <li class="nav-item"><a class="nav-link active" href="#">Lottery Result</a></li>
-              <button class="btn btn-link text-1000 fw-medium order-1 order-lg-0" type="button">Sign in</button>
-              <button class="btn btn-outline-danger rounded-pill order-0" type="submit">Help</button>
-            </form>
+              <li class="nav-item"><a class="nav-link" href="result.html">Lottery Result</a></li>
+              <li class="nav-item"><a class="nav-link" href="api.html">Result Api </a></li>
+            </ul>
+            <div class="d-flex py-3 py-lg-0">
+              <div style="display: inline-flex; gap: 2px;">
+                <button style="padding: 8px 15px; border: 1px solid #ccc; border-top-left-radius: 20px;border-bottom-left-radius: 20px;">English</button>
+                <button style="padding: 8px 15px; border: 1px solid #ccc; border-top-right-radius: 20px;border-bottom-right-radius: 20px;">Chinese</button>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
 
-      <div style="height:90px"></div>
+      <div style="height:75px"></div>
 
       <section class="bg-100 py-7" style="background-image: url('assets/img/patterns/magic.png');">
         <div class="container-lg">
@@ -200,16 +201,16 @@
                 <b class="gameName"></b>
                 <p class="gameInfo"></p>
               </span>
-              <span><button class="btn btn-outline-danger order-0"  onclick="showDefault();"><i class='bx bx-camera-movie bx-flashing' style="color: #F53839;"></i></button></span>
+              <span class="streamer" ></span>
             </div>
             <div class="" style="display: flex;height:auto;justify-content: center;align-items: center;">
-                <div class="menu ">
-                <div style="height:53px; display: flex; align-items: center; justify-content: center;border-bottom:solid 1px #eee" class="">
+                <div class="menu">
+                <div style="background-color:#fff; height:52px; display: flex; align-items: center; justify-content: center;border-bottom:solid 1px #000" class="">
                   <th>
                     <span class="" data-key="">Game series</span>
                   </th>
                 </div>
-                <ul class="menu-list ">
+                <ul class="menu-list">
                   <li class="menu-item"><button class="menu-button menu-button--black"><i data-feather="circle"></i>5D Game Series<i data-feather="chevron-right"></i></button>
                     <ul class="menu-sub-list" id="5d"></ul>
                   </li>
@@ -235,16 +236,16 @@
                     <ul class="menu-sub-list" id="happy8"></ul>
                   </li>
                 </ul>
-                <ul class="menu-list">
-                  <li class="menu-item"><button class="menu-button menu-button--delete"><i data-feather="trash-2"></i>Test 1</button></li>
-                </ul>
+                <!-- <ul class="menu-list">
+                  <li class="menu-item"><button class="menu-button menu-button--delete"><i data-feather="trash-2"></i>PK6 Coming Soon!</button></li>
+                </ul> -->
                 </div>
             
                 <!-- code here -->
         
-                <div class="table-responsive mb-4 border rounded-1 table-wrapper acctablewrappers" id="partners_mask" style="width:900px;height:500px;position:relative;top:14px;">              
+                <div class="table-responsive mb-4 border rounded-1 table-wrapper acctablewrappers" id="partners_mask" style="border:none; width:900px;height:500px;position:relative;top:14px;">              
                 <table class="table text-nowrap mb-0 align-middle table-hover table-striped" style="max-height:415px;overflow-y:scroll;">
-                  <thead class="text-dark tbl-header">
+                  <thead class="text-dark tbl-header" style="border: none;">
                     <tr class="accheaderrows">
                       <th>
                         <span class=" fw-semibold mb-0 translatable" data-key="">Draw period</span>
@@ -277,11 +278,26 @@
         </div>
       </section>
 
+      <section class="bg-200 pt-5 pb-0">
+        <div class="container">
+          <div class="row">
+          
+            <hr class="opacity-25" />
+            <div class="text-400 text-center">
+              <p><img class="d-inline-block align-middle" src="assets/img/icons/logo.png" alt="" width="30" /> 
+                <span class="d-inline-block text-1000 fs-1 ms-2 fw-medium lh-base">1Kball <span class="fw-bold">Lottery</span></span>
+                &copy; 2025 Enzerhub Coding Group
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <div id="dialog" class="dialog gradient-border" style="
-    min-width: 700px;
-    min-height: 500px;
+    min-width: 600px;
+    min-height: 400px;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -296,6 +312,10 @@
   </div>
   </div>
 
+  <template id="secret-template">
+    <button class="btn order-0 playbtn" style="border:solid 1px #ccc;border-radius:30px" onclick="showDefault($('.gameName').text());"><i class='bx bx-camera-movie bx-flashing' style="color: #F53839;"></i></button>
+    </template>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="vendors/@popperjs/popper.min.js"></script>
     <script src="vendors/bootstrap/bootstrap.min.js"></script>
@@ -304,13 +324,14 @@
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/bounce.min.js"></script>
     <script src="assets/js/custom_modal.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <link   href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.3.2/flv.min.js"></script>
     <script>
       // key variables
       let map = new Map();
       let live_socket = null;
+      let video_socket = null;
       let flvPlayer = null;
 
       function showDefault(e = "Dialog Title") {
@@ -319,7 +340,7 @@
         var t = new Bounce();
         t.scale({ from: { x: 0.2, y: 0.2 }, to: { x: 1, y: 1 } }),
           t.applyTo(document.querySelector(".dialog")),
-          $(".titlebar").text("Defalut test stream"),
+          $(".titlebar").text(e),
         startStream();
         console.clear();
       }
@@ -416,6 +437,7 @@
         let gameData = map.get(`${parts[0]}`)
         $(".gameName").text(parts[1])
         $(".gameInfo").text(parts[2])
+
         let html = '';
         let saveData = {id:parts[0],name:parts[1],details:parts[2]}
         localStorage.setItem("gameId", JSON.stringify(saveData))
@@ -437,7 +459,7 @@
         })
         $('#result-holder').append(html)
         liveDrawWss(parts[0])
-    
+       liveVideo(parts[0]) // live 
       }
       })
 
@@ -471,6 +493,7 @@
             })
             $('#result-holder').html(html)
             liveDrawWss(json.id)
+            liveVideo(json.id) // live 
         };
     
         default_socket.onclose = () => {
@@ -480,10 +503,7 @@
         default_socket.onopen = () => {
           console.log("Connected to draw get_all WebSocket");
         };
-    
-        default_socket.onclose = () => {
-          console.log("WebSocket closed");
-        };
+
       }
     
       function liveDrawWss(gameId=10001) {
@@ -501,15 +521,24 @@
         live_socket.onmessage = (event) => {
           const data = JSON.parse(event.data);
           console.log("Message received:", data);
-          const playerList = document.getElementById("result-holder");
-          let html = "";
-          html += `<tr style="text-align:center;height:36px">
-              <td>${data.draw_date}</td>
-              <td>${data.date_created}</td>
-              <td>${data.draw_number}</td>
-              <td>${data.draw_time}</td>
-            </tr>`;
-          playerList.insertAdjacentHTML("afterbegin", html);
+          if(!data.type){
+            const playerList = document.getElementById("result-holder");
+            let html = "";
+            html += `<tr style="text-align:center;height:36px">
+                <td>${data.draw_date}</td>
+                <td>${data.date_created}</td>
+                <td>${data.draw_number}</td>
+                <td>${data.draw_time}</td>
+              </tr>`;
+            playerList.insertAdjacentHTML("afterbegin", html);
+          }else{
+            if(data.result == 'live'){
+              $(".streamer").show();
+            }else{
+              $(".streamer").hide();
+            }
+          }
+        
         };
     
         live_socket.onclose = () => {
@@ -517,6 +546,38 @@
         };
       }
     
+      function liveVideo(gameId=10001) {
+    
+        if (video_socket && (video_socket.readyState === WebSocket.OPEN || video_socket.readyState === WebSocket.CONNECTING)) {
+          video_socket.close();
+        }
+    
+        video_socket = new WebSocket(`ws://localhost:2020?group=vid_state&gameid=` + gameId);
+    
+        video_socket.onopen = () => {
+          console.log("Connected to live draw WebSocket");
+        };
+    
+        video_socket.onmessage = (event) => {
+          const data = JSON.parse(event.data);
+          console.log("Message received:", data);
+        
+          if (data.result === 'live') {
+            const template = document.getElementById('secret-template');
+            const clone = template.content.cloneNode(true);
+            
+            // Wrap the DocumentFragment content in jQuery and append
+            $(".streamer").empty().append($(clone));
+          } else {
+            $(".playbtn").remove();
+          }
+        };
+    
+        video_socket.onclose = () => {
+          console.log("WebSocket closed");
+        };
+      }
+
       function storeDrawWss() {
     
         let draw_socket = new WebSocket("ws://localhost:2020?group=draw_storage");

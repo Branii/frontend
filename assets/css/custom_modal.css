@@ -5,7 +5,7 @@
 	font-size: 12px;
 	font-weight: 400;
 	color: #fff;
-	background: #000; /* change allowed */
+	background: #fff; /* change allowed */
 	margin: 0;
 	border-radius: 20px; /* change allowed */
 	position: absolute;
@@ -27,7 +27,10 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	cursor: move;
-	background: #000;
+	color:#000;
+	top:-10px;
+	position: relative;
+	background: #fff;
 }
 .dialog .content {
 	position: absolute;
@@ -77,7 +80,7 @@
 	padding: 0;
 	border: 0;
 	font-size: 1.4em;
-	background: #000;
+	background: #fff;
 }
 /* .dialog>button.hover, */
 /* .dialog>button:hover,
