@@ -60,7 +60,7 @@
 .dialog button {
 	-webkit-transition: 0.25s;
 	transition: 0.25s;
-	color: #fff;
+	color: #000;
 }
 .dialog button::-moz-focus-inner {
 	border: 0;
