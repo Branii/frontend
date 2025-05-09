@@ -72,6 +72,7 @@
       #api_result{
         padding: 20px;
         font-size: 25px;
+        background-color: #fff;
       }
     </style>
 
@@ -635,12 +636,12 @@
               </td>
             </tr>`;
         } else {
-          
+          let cleanedData = gameData.map(({ drawid, game_id, get_time, client,date_created, ...rest }) => rest);
           let apis = {
             "Game Name": parts[1],
             "Total Count": "10",
             "Today's Date": "2025-05-09",
-            "Data" : gameData
+            "Data" : cleanedData.reverse()
           };
           const obj = JSON.stringify(apis, null, 8);
           $("#api_result").html("<pre>" + obj + "</pre>");
@@ -674,16 +675,15 @@
           let gameData = map.get(`${json.id}`);
           $(".gameName").text(json.name);
           $(".gameInfo").text(json.details);
-          let html = "";
-          gameData.reverse().forEach((item) => {
-            html += `<tr style="text-align:center;height:36px">
-                  <td>${item.draw_date}</td>
-                  <td>${item.date_created}</td>
-                  <td>${item.draw_number}</td>
-                  <td>${item.draw_time}</td>
-                </tr>`;
-          });
-          $("#result-holder").html(html);
+          let cleanedData = gameData.reverse().map(({ drawid, game_id, get_time, client,date_created, ...rest }) => rest);
+          let apis = {
+            "Game Name": json.name,
+            "Total Count": "10",
+            "Today's Date": "2025-05-09",
+            "Data" : cleanedData
+          };
+          const obj = JSON.stringify(apis, null, 8);
+          $("#api_result").html("<pre>" + obj + "</pre>");
           liveDrawWss(json.id);
           liveVideo(json.id); // live
         };
@@ -716,15 +716,15 @@
           const data = JSON.parse(event.data);
           console.log("Message received:", data);
           if (!data.type) {
-            const playerList = document.getElementById("result-holder");
-            let html = "";
-            html += `<tr style="text-align:center;height:36px">
-                <td>${data.draw_date}</td>
-                <td>${data.date_created}</td>
-                <td>${data.draw_number}</td>
-                <td>${data.draw_time}</td>
-              </tr>`;
-            playerList.insertAdjacentHTML("afterbegin", html);
+            let cleanedData = gameData.reverse().map(({ drawid, game_id, get_time, client,date_created, ...rest }) => rest);
+            let apis = {
+              "Game Name": parts[1],
+              "Total Count": "10",
+              "Today's Date": "2025-05-09",
+              "Data" : cleanedData
+            };
+            const obj = JSON.stringify(apis, null, 8);
+            $("#api_result").html("<pre>" + obj + "</pre>");
           } else {
             if (data.result == "live") {
               $(".streamer").show();
