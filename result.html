@@ -90,7 +90,7 @@
         display: none;
         padding: 8px;
         background-color: var(--color-bg-secondary);
-        border-radius: 10px;
+        border-radius: 0px;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         position: absolute;
         left: 100%;
@@ -116,7 +116,7 @@
         padding: 8px 8px;
         padding-right: 36px;
         width: 100%;
-        border-radius: 8px;
+        border-radius: 0px;
         text-align: left;
         display: flex;
         align-items: center;
@@ -162,6 +162,9 @@
         bottom: 1px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
       }
+      th{
+        border:none;
+      }
     
     </style> 
   </head>
@@ -205,7 +208,7 @@
             </div>
             <div class="" style="display: flex;height:auto;justify-content: center;align-items: center;">
                 <div class="menu">
-                <div style="background-color:#fff; height:52px; display: flex; align-items: center; justify-content: center;border-bottom:solid 1px #000" class="">
+                <div style="background-color:#fff; height:51px; display: flex; align-items: center; justify-content: center;border-bottom:none" class="">
                   <th>
                     <span class="" data-key="">Game series</span>
                   </th>
@@ -245,10 +248,10 @@
         
                 <div class="table-responsive mb-4 border rounded-1 table-wrapper acctablewrappers" id="partners_mask" style="border:none; width:900px;height:500px;position:relative;top:14px;">              
                 <table class="table text-nowrap mb-0 align-middle table-hover table-striped" style="max-height:415px;overflow-y:scroll;">
-                  <thead class="text-dark tbl-header" style="border: none;">
-                    <tr class="accheaderrows">
+                  <thead class="text-dark tbl-header">
+                    <tr class="accheaderrows"  style="border: none;">
                       <th>
-                        <span class=" fw-semibold mb-0 translatable" data-key="">Draw period</span>
+                        <span class="translatable" data-key="">Draw period</span>
                       </th>
                       <th>
                         <span class=" fw-semibold mb-0 translatable" data-key="">Draw date</span>
@@ -278,7 +281,7 @@
         </div>
       </section>
 
-      <section class="bg-200 pt-5 pb-0">
+      <section class="bg-200 pt-5 pb-0" style="bottom:0;padding:0;position:relative">
         <div class="container">
           <div class="row">
           
