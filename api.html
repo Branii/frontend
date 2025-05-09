@@ -658,7 +658,7 @@
 
         default_socket.onmessage = (event) => {
           const data = JSON.parse(event.data);
-          //console.log("All games received:", data);
+          console.log("All games received:", data);
           for (games in data) {
             map.set(games, data[games]);
           }
