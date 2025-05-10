@@ -1,0 +1,126 @@
+
+{
+    "en" : {
+
+        "home": "Home",
+        "products": "Products",
+        "lottery_Result" : "Lottery Result",
+        "result_api" : "Result API",
+
+        "home_title" : "1kball Lottery is a type of digital lottery game that provides real-time lottery results and live video services, allowing users to watch the lottery drawing process through online streaming, increasing user engagement and entertainment. As an innovator in the lottery industry.",
+        "real_time":"Real-time lottery results",
+        "global_support":"Global data support",
+        "multiple_lottery":"Multiple lottery types",
+        "video_lottery":"Live video lottery",
+        "draw_result":"Draw-Result API",
+        "lottery_management":"Lottery Draw Management",
+
+        "result_title":"The website can provide real-time lottery results, allowing users to stay up-to-date with the latest lottery results.",
+        "global_title":"The website provides global lottery data support, allowing users to participate in lottery games from around the world and learn about global lottery results",
+        "multiple_title":"The website covers a variety of lottery types, including 3D, 5D, 11-5, PK10, Mark Six, Fast Three, Keno, PC egg, and global lotteries, allowing users to choose the lottery types they are interested in.",
+        "video_title":"The website provides live video lottery services, allowing users to watch lottery draws live via the internet, increasing user participation and entertainment value.",
+        "api_title":"The website provides available api endpoint for live draw number, other lottery players can support their games with our draw numbers.",
+        "draw_title":"The website provieds 24 hours lottery draww services with many lottery draw support around the world.",
+
+        "3d_lottery":"3D Lottery",
+        "5d_lottery":"5D Lottery",
+        "11x5_lottery":"11 Choose 5 Lottery",
+        "fast3_lottery":"Mark Six Lottery",
+        "mark6_lottery":"Fast Three Lottery",
+        "keno_lottery":"Keno Lottery",
+        "pc28_lottery":"PC28 Lottery",
+        "pk10_lottery":"PK10 Lottery",
+        "pk6_lottery":"PK6 Lottery",
+
+        "3d_info":"3D Lottery is a number-based lottery game where players need to predict the order of three numbers. It is the earliest digital lottery in China and one of the most popular lotteries.",
+        "5d_info":"5D Lottery is a number-based lottery game where players need to predict the order of five numbers. It is a relatively new lottery game but has become a favorite of many players.",
+        "11x5_info":"11 Choose 5 Lottery is a number-based lottery game where players need to choose five numbers from 1 to 11. It is a very popular lottery game.",
+        "mark6_info":"Mark Six Lottery is a number-based lottery game where players need to predict the order of seven numbers. It is one of the most popular lottery games in Asia and also one of the largest lottery games in the world.",
+        "fast3_info":"Fast Three Lottery is a dice-based lottery game where players need to predict the number on three dice. It is a very popular lottery game because of its simple rules and high winning rate.",
+        "keno_info":"Keno Lottery is a number-based lottery game where players need to choose 20 numbers from 1 to 80. It is a relatively new lottery game but has become a favorite of many players.",
+        "pc28_info":"PC28 Lottery is a number-based lottery game where players need to predict one or more numbers from the numbers 1 to 28. If their numbers match the winning numbers, they will win the corresponding prize money. PC28 Lottery is a very popular lottery game because of its simple rules and very high odds.",
+        "pk10_info":"PK10 Lottery is a digital lottery game where players need to predict the order of ten numbers. As a leading player in the lottery industry, PK10 Lottery has unique advantages in rules and odds, and is loved by lottery players.",
+        "pk6_info":"PK6 Lottery is a digital lottery game where players need to predict the order of six numbers. As a leading player in the lottery industry, PK6 Lottery has unique advantages in rules and odds, and is loved by lottery players.",
+
+        "game_series":"Game Series",
+        "3d_series":"3D Game Series",
+        "5d_series":"5D Game Series",
+        "11x5_series":"11x5 Game Series",
+        "mark6_series":"Mark6 Game Series",
+        "fast3_series":"Fast3 Game Series",
+        "keno_series":"Keno Game Series",
+        "pc28_series":"PC28 Game Series",
+        "pk10_series":"PK10 Game Series",
+        "pk6_series":"PK6 Game Series",
+
+        "draw_period":"Draw Period",
+        "draw_date":"Draw Date",
+        "draw_time":"Draw Time",
+        "draw_number":"Draw Number"
+  
+      },
+    "zh" : {
+        
+        "home": "首页",
+        "products": "产品",
+        "lottery_Result": "彩票结果",
+        "result_api": "结果接口",
+      
+        "home_title": "1kball 彩票是一种提供实时彩票结果和在线视频服务的数字彩票游戏，用户可以通过在线直播观看彩票开奖过程，提高用户参与感和娱乐性。作为彩票行业的创新者。",
+        "real_time": "实时彩票开奖",
+        "global_support": "全球数据支持",
+        "multiple_lottery": "多种彩票类型",
+        "video_lottery": "视频彩票开奖",
+        "draw_result": "开奖结果 API",
+        "lottery_management": "彩票开奖管理",
+      
+        "result_title": "本网站提供实时彩票开奖结果，让用户随时掌握最新的彩票信息。",
+        "global_title": "本网站提供全球彩票数据支持，让用户参与来自世界各地的彩票游戏，了解全球彩票结果。",
+        "multiple_title": "本网站涵盖多种彩票类型，包括 3D、5D、11选5、PK10、Mark Six、快3、Keno、PC蛋蛋及全球彩票，用户可自由选择感兴趣的彩票类型。",
+        "video_title": "本网站提供视频彩票开奖服务，用户可以通过网络直播观看彩票开奖过程，提高用户参与度与娱乐性。",
+        "api_title": "本网站提供用于实时开奖号码的API接口，其他彩票网站可使用我们的开奖号码数据来支持他们的游戏。",
+        "draw_title": "本网站提供24小时不间断的彩票开奖服务，支持多种彩票类型的全球开奖。",
+      
+        "3d_lottery": "3D 彩票",
+        "5d_lottery": "5D 彩票",
+        "11x5_lottery": "11选5 彩票",
+        "fast3_lottery": "快3 彩票",
+        "mark6_lottery": "六合彩",
+        "keno_lottery": "快乐彩",
+        "pc28_lottery": "PC蛋蛋",
+        "pk10_lottery": "PK10 彩票",
+        "pk6_lottery": "PK6 彩票",
+      
+        "3d_info": "3D 彩票是一种基于数字的彩票游戏，玩家需预测三个数字的顺序。它是中国最早的数字彩票之一，也是最受欢迎的彩票之一。",
+        "5d_info": "5D 彩票是一种基于数字的彩票游戏，玩家需预测五个数字的顺序。它是一种彩票较新的形式，但迅速受到众多玩家喜爱。",
+        "11x5_info": "11选5是一种基于数字的彩票游戏，玩家需从1到11中选择5个数字。这是一种彩票非常受欢迎。",
+        "mark6_info": "六合彩是一种基于数字的彩票游戏，玩家需预测7个数字的顺序。它是亚洲最受欢迎的彩票之一，也是世界上规模最大的种彩票之一。",
+        "fast3_info": "快3是一种基于骰子的数字彩票游戏，玩家需预测三个骰子的点数。因其规则简单、中奖率高而广受欢迎。",
+        "keno_info": "快乐彩是一种彩票游戏，玩家需从1到80中选择20个数字。尽管这种游戏较新，但已受到许多玩家喜爱。",
+        "pc28_info": "PC蛋蛋是一种基于数字的彩票游戏，玩家需从1到28中预测一个或多个数字。若玩家选择的数字与开奖号码相符，即可赢取相应奖金。由于其规则简单和赔率高，深受玩家喜爱。",
+        "pk10_info": "PK10 是一种数字型彩票游戏，玩家需预测10个数字的顺序。作为彩票行业的领先游戏，PK10在规则和赔率上具有独特优势，深受彩票玩家青睐。",
+        "pk6_info": "PK6 是一种数字型彩票游戏，玩家需预测6个数字的顺序。作为彩票行业的领先游戏，PK6 在规则和赔率上也具有独特优势，广受欢迎。",
+      
+        "game_series": "游戏系列",
+        "3d_series": "3D 游戏系列",
+        "5d_series": "5D 游戏系列",
+        "11x5_series": "11选5 游戏系列",
+        "mark6_series": "六合彩系列",
+        "fast3_series": "快3 游戏系列",
+        "keno_series": "快乐彩系列",
+        "pc28_series": "PC蛋蛋系列",
+        "pk10_series": "PK10 系列",
+        "pk6_series": "PK6 系列",
+      
+        "draw_period": "开奖期数",
+        "draw_date": "开奖日期",
+        "draw_time": "开奖时间",
+        "draw_number": "开奖号码"
+      }
+  }
+  
+  
+  
+  
+  
+  

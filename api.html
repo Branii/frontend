@@ -230,42 +230,24 @@
               class="navbar-nav mx-auto border-bottom border-lg-bottom-0 pt-2 pt-lg-0"
             >
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link translatable" href="index.html" data-key="home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="products.html">Products </a>
+                <a class="nav-link translatable" href="products.html" data-key="products">Products </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="result.html">Lottery Result</a>
+                <a class="nav-link translatable" href="result.html" data-key="lottery_Result">Lottery Result</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="api.html"
+                <a class="nav-link active translatable" aria-current="page" href="api.html"  data-key="result_api"
                   >Result Api
                 </a>
               </li>
             </ul>
             <div class="d-flex py-3 py-lg-0">
               <div style="display: inline-flex; gap: 2px">
-                <button
-                  style="
-                    padding: 8px 15px;
-                    border: 1px solid #ccc;
-                    border-top-left-radius: 20px;
-                    border-bottom-left-radius: 20px;
-                  "
-                >
-                  English
-                </button>
-                <button
-                  style="
-                    padding: 8px 15px;
-                    border: 1px solid #ccc;
-                    border-top-right-radius: 20px;
-                    border-bottom-right-radius: 20px;
-                  "
-                >
-                  Chinese
-                </button>
+                <button id="en_lang" style="padding: 8px 15px; border: 1px solid #ccc; border-top-left-radius: 20px;border-bottom-left-radius: 20px;">English</button>
+                <button id="zh_lang" style="padding: 8px 15px; border: 1px solid #ccc; border-top-right-radius: 20px;border-bottom-right-radius: 20px;">Chinese</button>
               </div>
             </div>
           </div>
@@ -276,7 +258,7 @@
 
       <section
         class="bg-100 py-7"
-        style="background-image: url('assets/img/patterns/magic.png')"
+        style="height:100vh;background-image: url('assets/img/patterns/magic.png')"
       >
         <div class="container-lg">
           <div
@@ -321,70 +303,56 @@
                   class=""
                 >
                   <th>
-                    <span class="" data-key="">Game series</span>
+                    <span class="translatable" data-key="game_series">Game series</span>
                   </th>
                 </div>
                 <ul class="menu-list">
                   <li class="menu-item">
-                    <button class="menu-button menu-button--black">
-                      <i data-feather="circle"></i>5D Game Series<i
-                        data-feather="chevron-right"
-                      ></i>
+                    <button class="menu-button menu-button--black translatable" data-key="5d_series">
+                      5D Game Series
                     </button>
                     <ul class="menu-sub-list" id="5d"></ul>
                   </li>
                   <li class="menu-item">
-                    <button class="menu-button menu-button--black">
-                      <i data-feather="circle"></i>3D Game Series<i
-                        data-feather="chevron-right"
-                      ></i>
+                    <button class="menu-button menu-button--black translatable" data-key="3d_series">
+                      3D Game Series
                     </button>
                     <ul class="menu-sub-list" id="3d"></ul>
                   </li>
                   <li class="menu-item">
-                    <button class="menu-button menu-button--black">
-                      <i data-feather="circle"></i>Fast3 Game Series<i
-                        data-feather="chevron-right"
-                      ></i>
+                    <button class="menu-button menu-button--black translatable" data-key="fast3_series">
+                      Fast3 Game Series
                     </button>
                     <ul class="menu-sub-list" id="fast3"></ul>
                   </li>
                   <li class="menu-item">
-                    <button class="menu-button menu-button--black">
-                      <i data-feather="circle"></i>PK10 Game Series
+                    <button class="menu-button menu-button--black translatable" data-key="pk10_series">
+                      PK10 Game Series
                       <i data-feather="chevron-right"></i>
                     </button>
                     <ul class="menu-sub-list" id="pk10"></ul>
                   </li>
                   <li class="menu-item">
-                    <button class="menu-button menu-button--black">
-                      <i data-feather="circle"></i>PC28 Game Series<i
-                        data-feather="chevron-right"
-                      ></i>
+                    <button class="menu-button menu-button--black translatable" data-key="pc28_series">
+                      PC28 Game Series
                     </button>
                     <ul class="menu-sub-list" id="pc28"></ul>
                   </li>
                   <li class="menu-item">
-                    <button class="menu-button menu-button--black">
-                      <i data-feather="circle"></i>Mark6 Game Series<i
-                        data-feather="chevron-right"
-                      ></i>
+                    <button class="menu-button menu-button--black translatable" data-key="mark6_series">
+                      Mark6 Game Series
                     </button>
                     <ul class="menu-sub-list" id="mark6"></ul>
                   </li>
                   <li class="menu-item">
-                    <button class="menu-button menu-button--black">
-                      <i data-feather="circle"></i>11x5 Game Series<i
-                        data-feather="chevron-right"
-                      ></i>
+                    <button class="menu-button menu-button--black translatable" data-key="11x5_series">
+                      11x5 Game Series
                     </button>
                     <ul class="menu-sub-list" id="11x5"></ul>
                   </li>
                   <li class="menu-item">
-                    <button class="menu-button menu-button--black">
-                      <i data-feather="circle"></i>Happy8 Game Series<i
-                        data-feather="chevron-right"
-                      ></i>
+                    <button class="menu-button menu-button--black translatable" data-key="keno_series">
+                      Keno Game Series
                     </button>
                     <ul class="menu-sub-list" id="happy8"></ul>
                   </li>
@@ -414,7 +382,13 @@
 
       <section
         class="bg-200 pt-5 pb-0"
-        style="bottom: 0; padding: 0; position: relative"
+        style="position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  color: white;
+  text-align: center;"
       >
         <div class="container">
           <div class="row">
@@ -476,17 +450,10 @@
     </template>
 
     <script src="assets/js/jquery.min.js"></script>
-    <script src="vendors/@popperjs/popper.min.js"></script>
-    <script src="vendors/bootstrap/bootstrap.min.js"></script>
-    <script src="vendors/is/is.min.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-    <script src="assets/js/theme.js"></script>
     <script src="assets/js/bounce.min.js"></script>
     <script src="assets/js/custom_modal.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      rel="stylesheet"
-    />
+    <script src="assets/js/lang.js"></script>
+    <link   href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.3.2/flv.min.js"></script>
     <script>
@@ -495,6 +462,7 @@
       let live_socket = null;
       let video_socket = null;
       let flvPlayer = null;
+      let gameDatas;
 
       function showDefault(e = "Dialog Title") {
         let l;
@@ -591,32 +559,6 @@
         }
       }
 
-      //pretify json in a div
-      function syntaxHighlight(json) {
-        json = json
-          .replace(/&/g, "&amp;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;");
-        return json.replace(
-          /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g,
-          function (match) {
-            var cls = "number";
-            if (/^"/.test(match)) {
-              if (/:$/.test(match)) {
-                cls = "key";
-              } else {
-                cls = "string";
-              }
-            } else if (/true|false/.test(match)) {
-              cls = "boolean";
-            } else if (/null/.test(match)) {
-              cls = "null";
-            }
-            return '<span class="' + cls + '">' + match + "</span>";
-          }
-        );
-      }
-
       //do some handlers
       $(document).on("click", ".game-item", function () {
         let value = $(this).attr("value");
@@ -636,12 +578,13 @@
               </td>
             </tr>`;
         } else {
-          let cleanedData = gameData.map(({ drawid, game_id, get_time, client,date_created, ...rest }) => rest);
+          let cleanedDataa = gameData.map(({ drawid, game_id, get_time, client, ...rest }) => rest);
+          cleanedDataa.sort((a, b) => parseInt(b.draw_count) - parseInt(a.draw_count));
           let apis = {
             "Game Name": parts[1],
             "Total Count": "10",
             "Today's Date": "2025-05-09",
-            "Data" : cleanedData.reverse()
+            "Data" : cleanedDataa.slice(0, 10)
           };
           const obj = JSON.stringify(apis, null, 8);
           $("#api_result").html("<pre>" + obj + "</pre>");
@@ -672,15 +615,16 @@
             localStorage.getItem("gameId") ?? JSON.stringify(custom);
           let json = JSON.parse(storedGame);
           console.log(storedGame);
-          let gameData = map.get(`${json.id}`);
+          gameDatas = map.get(`${json.id}`);
           $(".gameName").text(json.name);
           $(".gameInfo").text(json.details);
-          let cleanedData = gameData.reverse().map(({ drawid, game_id, get_time, client,date_created, ...rest }) => rest);
+          let cleanedData = gameDatas.reverse().map(({ drawid, game_id, get_time, client, ...rest }) => rest);
+          cleanedData.sort((a, b) => parseInt(b.draw_count) - parseInt(a.draw_count));
           let apis = {
             "Game Name": json.name,
             "Total Count": "10",
             "Today's Date": "2025-05-09",
-            "Data" : cleanedData
+            "Data" : cleanedData.slice(0, 10)
           };
           const obj = JSON.stringify(apis, null, 8);
           $("#api_result").html("<pre>" + obj + "</pre>");
@@ -714,16 +658,26 @@
 
         live_socket.onmessage = (event) => {
           const data = JSON.parse(event.data);
-          console.log("Message received:", data);
+          console.log("Message received livesocket:", data);
           if (!data.type) {
-            let cleanedData = gameData.reverse().map(({ drawid, game_id, get_time, client,date_created, ...rest }) => rest);
-            let apis = {
-              "Game Name": parts[1],
-              "Total Count": "10",
-              "Today's Date": "2025-05-09",
-              "Data" : cleanedData
-            };
-            const obj = JSON.stringify(apis, null, 8);
+            let newItem = {
+              "draw_date":data.draw_date,
+              "draw_time": data.draw_time,
+              "draw_number": data.draw_number,
+              "draw_count": data.draw_count,
+              "draw_created": data.date_created,
+          };
+          gameDatas.push(newItem);
+          gameDatas.sort((a, b) => parseInt(b.draw_count) - parseInt(a.draw_count));
+          let cleanedDatas = gameDatas.map(({ drawid, game_id, get_time, client, ...rest }) => rest);
+          let liveapi = {
+            "Game Name": $(".gameName").text(),
+            "Total Count": "10",
+            "Today's Date": "2025-05-09",
+            "Data" : cleanedDatas.slice(0, 10)
+          };
+          //console.log(gameDatas);
+            const obj = JSON.stringify(liveapi, null, 8);
             $("#api_result").html("<pre>" + obj + "</pre>");
           } else {
             if (data.result == "live") {
