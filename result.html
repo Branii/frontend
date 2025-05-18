@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
+<html lang="en-US" dir="ltr" style="background-color: #fff;">
 
   <head>
 
@@ -18,6 +18,7 @@
     <link href="assets/css/custom_modal.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/animations.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"/>
+    <link rel="stylesheet" href="assets/css/bottomsheet.css"/>
     <style>
       .glass-effect {
         background: rgba(255, 255, 255, 0.1); /* or use rgba(0, 0, 0, 0.2) for darker glass */
@@ -57,7 +58,7 @@
         --color-orange: #dc9960;
         --color-green: #1eb8b1;
         --color-purple: #657cc4;
-        --color-black translatable: var(--color-text-primary);
+        --color-black: var(--color-text-primary);
         --color-red: #d92027;
       }
     
@@ -167,6 +168,37 @@
     
     </style> 
 
+    <style>
+  .accordion-button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  .accordion-button:not(.collapsed) {
+    box-shadow: none !important;
+  }
+  @media (max-width: 576px) {
+  table th,
+  table td {
+    font-size: 11.5px;
+    padding: 4px 6px;
+    white-space: normal;
+    word-break: break-word;
+    max-width: 172px;  
+  }
+}
+/* Completely hide scrollbar for WebKit browsers (Chrome, Safari) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+    </style>
+
   </head>
 
 
@@ -174,93 +206,90 @@
 
      <main class="main" id="top" style="background-color: #fff;">
 
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll" style="background-color: #fff;box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
-        <div class="container"><a class="navbar-brand" href="index.html"><img src="assets/img/icons/logo.png" alt="" width="30" /><span class="text-1000 fs-1 ms-2 fw-medium">1Kball<span class="fw-bold"> Lottery</span></span></a>
-          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <nav
+        class="navbar navbar-expand-lg navbar-light fixed-top py-3"
+        data-navbar-on-scroll="data-navbar-on-scroll"
+        style="
+          background-color: #fff;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        "
+      >
+        <div class="container">
+          <a class="navbar-brand" href="index.html"
+            ><img src="assets/img/icons/logo.png" alt="" width="30" /><span
+              class="text-1000 fs-1 ms-2 fw-medium"
+              >1Kball<span class="fw-bold"> Lottery</span></span
+            ></a
+          >
+          <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto border-bottom border-lg-bottom-0 pt-2 pt-lg-0">
-              <li class="nav-item "><a class="nav-link translatable" href="index.html" data-key="home">Home</a></li>
-              <li class="nav-item "><a class="nav-link translatable" href="products.html" data-key="products">Products </a></li>
-              <li class="nav-item "><a class="nav-link translatable active" aria-current="page" href="result.html" data-key="lottery_Result">Lottery Result</a></li>
-              <li class="nav-item "><a class="nav-link translatable" href="api.html" data-key="result_api">Result Api </a></li>
+            <ul
+              class="navbar-nav mx-auto border-bottom border-lg-bottom-0 pt-2 pt-lg-0"
+            >
+              <li class="nav-item">
+                <a class="nav-link translatable" href="index.html" data-key="home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link translatable" href="products.html" data-key="products">Products </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link translatable" aria-current="page" href="#" data-key="lottery_Result">Lottery Result</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active translatable" href="api.html"  data-key="result_api"
+                  >Result Api
+                </a>
+              </li>
             </ul>
-            <div class="d-flex py-3 py-lg-0">
-              <div style="display: inline-flex; gap: 2px;">
+            <!-- <div class="d-flex py-3 py-lg-0">
+              <div style="display: inline-flex; gap: 2px">
                 <button id="en_lang" style="padding: 8px 15px; border: 1px solid #ccc; border-top-left-radius: 20px;border-bottom-left-radius: 20px;">English</button>
                 <button id="zh_lang" style="padding: 8px 15px; border: 1px solid #ccc; border-top-right-radius: 20px;border-bottom-right-radius: 20px;">Chinese</button>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
-      </nav>
+    </nav>
 
       <div style="height:75px"></div>
 
-      <section class="bg-100 py-7" style="height:100vh;background-image: url('assets/img/patterns/magic.png');">
-        <div class="container-lg">
-          <div class="row h-100 justify-content-center" style="height:400px;background-color:redx">
-            <div style="height: 40px; width:76%;display: flex; justify-content: space-between; align-items: center; padding: 0 10px;">
+      <section class="bg-100 py-7" style="height:auto;background-image: url('assets/img/patterns/magic.png');">
+        <div class="container-lg hide-scrollbar">
+          <div class="row h-100 justify-content-center hide-scrollbar" style="height:400px;background-color:redx">
+            <div style="height: 40px; width:96%;display: flex; justify-content: space-between; align-items: center; padding: 0 10px;">
               <span>
-                <b class="gameName"></b>
-                <p class="gameInfo"></p>
+                <b class="gameName"></b><span class="streamer"></span>
+                <p class="gameInfo" style="font-size: 14px;"></p>
               </span>
-              <span class="streamer" ></span>
+              <!-- <span class="streamer"></span> -->
             </div>
             <div class="conn" style="display: flex;height:auto;justify-content: center;align-items: center;">
-                <div class="menu">
-                <div style="background-color:#fff; height:51px; display: flex; align-items: center; justify-content: center;border-bottom:none" class="">
-                  <th>
-                    <span class="translatable" data-key="game_series">Game series</span>
-                  </th>
-                </div>
-                <ul class="menu-list">
-                  <li class="menu-item"><button class="menu-button menu-button--black translatable" data-key="5d_series">5D Game Series</button>
-                    <ul class="menu-sub-list" id="5d"></ul>
-                  </li>
-                  <li class="menu-item"><button class="menu-button menu-button--black translatable" data-key="3d_series">3D Game Series</button>
-                    <ul class="menu-sub-list" id="3d"></ul>
-                  </li>
-                  <li class="menu-item"><button class="menu-button menu-button--black translatable" data-key="fast3_series">Fast3 Game Series</button>
-                    <ul class="menu-sub-list" id="fast3"></ul>
-                  </li>
-                  <li class="menu-item"><button class="menu-button menu-button--black translatable" data-key="pk10_series">PK10 Game Series </button>
-                    <ul class="menu-sub-list" id="pk10"></ul>
-                  </li>
-                  <li class="menu-item"><button class="menu-button menu-button--black translatable" data-key="pc28_series">PC28 Game Series</button>
-                    <ul class="menu-sub-list" id="pc28"></ul>
-                  </li>
-                  <li class="menu-item"><button class="menu-button menu-button--black translatable" data-key="mark6_series">Mark6 Game Series</button>
-                    <ul class="menu-sub-list" id="mark6"></ul>
-                  </li>
-                  <li class="menu-item"><button class="menu-button menu-button--black translatable" data-key="11x5_series">11x5 Game Series</button>
-                    <ul class="menu-sub-list" id="11x5"></ul>
-                  </li>
-                  <li class="menu-item"><button class="menu-button menu-button--black translatable" data-key="keno_series">Keno Game Series</button>
-                    <ul class="menu-sub-list" id="happy8"></ul>
-                  </li>
-                </ul>
-                <!-- <ul class="menu-list">
-                  <li class="menu-item"><button class="menu-button menu-button--delete"><i data-feather="trash-2"></i>PK6 Coming Soon!</button></li>
-                </ul> -->
-                </div>
-            
-                <!-- code here -->
         
-                <div class="table-responsive mb-4 border rounded-1 table-wrapper acctablewrappers" id="partners_mask" style="border:none; width:900px;height:500px;position:relative;top:14px;">              
+              <div class="table-responsive mb-4 border rounded-1 table-wrapper acctablewrappers" id="partners_mask" style="background-color: #fff; border:none; width:900px;height:500px;position:relative;top:14px;">              
                 <table class="table text-nowrap mb-0 align-middle table-hover table-striped" style="max-height:415px;overflow-y:scroll;">
                   <thead class="text-dark tbl-header">
                     <tr class="accheaderrows"  style="border: none;">
                       <th>
-                        <span class="translatable" data-key="draw_period">Draw period</span>
+                        <span class="translatable" data-key="draw_period">Period</span>
                       </th>
                       <th>
-                        <span class=" fw-semibold mb-0 translatable" data-key="draw_date">Draw date</span>
+                        <span class=" fw-semibold mb-0 translatable" data-key="draw_date">Date</span>
                       </th>
                       <th>
-                        <span class=" fw-semibold mb-0 translatable" data-key="draw_number">Draw number</span>
+                        <span class=" fw-semibold mb-0 translatable" data-key="draw_number">Draws</span>
                       </th>
                       <th>
-                        <span class=" fw-semibold mb-0 translatable" data-key="draw_time">Draw time</span>
+                        <span class=" fw-semibold mb-0 translatable" data-key="draw_time">Time</span>
                       </th>
                     </tr>
                   </thead>
@@ -274,65 +303,159 @@
             
                   </tbody>
                 </table> 
-                </div>    
-            </div>
-            <!-- <div id="pagination"></div> -->
-          </div>
-        </div>
-      </section>
+                    
+              </div>   
+              
 
-      <section class="bg-200 pt-5 pb-0" style=" position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #fff;
-  color: white;
-  text-align: center;">
-        <div class="container">
-          <div class="row">
-          
-            <hr class="opacity-25" />
-            <div class="text-400 text-center">
-              <p><img class="d-inline-block align-middle" src="assets/img/icons/logo.png" alt="" width="30" /> 
-                <span class="d-inline-block text-1000 fs-1 ms-2 fw-medium lh-base">1Kball <span class="fw-bold">Lottery</span></span>
-                &copy; 2025 Enzerhub Coding Group
-              </p>
             </div>
+
           </div>
+
         </div>
+
       </section>
+      
+      <button onclick="showBottomSheet('menu');" style="height: 40px;position: fixed;left: 0;bottom: 0;width: 100%;background-color: #fff;color: white;text-align: center;">
+            <div class="cardalign-items-center"><p class="text-600 mb-0 translatable" data-key="click_to_show">Show lottery series</p></div>
+      </button>
 
     </main>
 
-    <div id="dialog" class="dialog gradient-border" style="
-    min-width: 600px;
-    min-height: 400px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-  ">
-  <div class="overlay"></div>
-  <div class="titlebar"></div>
-  <button name="close" id="stopStream"></button>
-  <div class="content" style="overflow: hidden" id="videoContainer">
-    <video style="width: 100%; height: 100%" id="liveVideo" controls autoplay></video>
-  </div>
-  </div>
+    <div class="bottom-sheet-container" style="z-index: 9999;">
+      <div class="sheet-overlay"></div>
+      <div class="sheet-content">
+        <div class="sheet-header">
+          <div class="drag-icon"><span></span></div>
+        </div>
+        <div class="sheet-body" id="sheet-body">
 
-  <template id="secret-template">
-    <button class="btn order-0 playbtn" style="border:solid 1px #ccc;border-radius:30px" onclick="showDefault($('.gameName').text());"><i class='bx bx-camera-movie bx-flashing' style="color: #F53839;"></i></button>
-  </template>
+        <div class="text-center" id="video" style="height: 400px; width: 100%;display: none;">
+          <span style="text-align: left;">
+            <span class="vidtitle"></span>
+          </s>
+          <video
+            id="liveVideo"
+            controls
+            autoplay
+            muted
+            playsinline
+            style="width: 100%; height: 100%; object-fit: cover; display: block;"
+          ></video>
+        </div>
+
+
+          <div class="accordion" id="menu" style="">
+            
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  5D Game Series
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <ul class="accordion-body" id="5d"></ul>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  3D Game Series
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <ul class="accordion-body" id="3d"></ul>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Fast3 Game Series
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <ul class="accordion-body" id="fast3"></ul>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  PK10 Game Series
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <ul class="accordion-body" id="pk10"></ul>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  PC28 Game Series
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <ul class="accordion-body" id="pc28"></ul>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  Mark6 Game Series
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <ul class="accordion-body" id="mark6"></ul>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  11x5 Game Series
+                </button>
+              </h2>
+              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <ul class="accordion-body" id="11x5"></ul>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                  Keno Game Series
+                </button>
+              </h2>
+              <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <ul class="accordion-body" id="happy8"></ul>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <template id="secret-template">
+     <i class='bx bx-camera-movie bx-flashing ' style="color: #F53839;font-size: 20px;"  onclick="showBottomSheet('video',$('.gameName').text());"></i>
+    </template>
 
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- <script src="assets/js/theme.js"></script> -->
     <script src="assets/js/lang.js"></script>
-    <script src="assets/js/theme.js"></script>
+    <!-- <script src="assets/js/theme.js"></script> -->
     <script src="assets/js/bounce.min.js"></script>
-    <script src="assets/js/custom_modal.js"></script>
+    <!-- <script src="assets/js/custom_modal.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flv.js/1.3.2/flv.min.js"></script>
+    <script src="assets/js/bottomsheet.js"></script>
+    <!-- <script src="assets/js/bottomsheett.js"></script> -->
     <script src="assets/js/result.js"></script>
   </body>
 

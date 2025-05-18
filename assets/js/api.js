@@ -4,17 +4,6 @@ let video_socket = null;
 let flvPlayer = null;
 let gameDatas;
 
-function showDefault(e = "Dialog Title") {
-  let l;
-  (l = new DialogBox("dialog", null)).showDialog();
-  var t = new Bounce();
-  t.scale({ from: { x: 0.2, y: 0.2 }, to: { x: 1, y: 1 } }),
-    t.applyTo(document.querySelector(".dialog")),
-    $(".titlebar").text(e),
-    startStream();
-  console.clear();
-}
-
 function startStream() {
   if (flvjs.isSupported()) {
     let e = document.getElementById("liveVideo");
@@ -126,7 +115,7 @@ $(document).on("click", ".game-item", function () {
       "Today's Date": "2025-05-09",
       "Data" : cleanedDataa.slice(0, 10)
     };
-    const obj = JSON.stringify(apis, null, 8);
+    const obj = JSON.stringify(apis, null, 5);
     $("#api_result").html("<pre>" + obj + "</pre>");
     liveDrawWss(parts[0]);
     liveVideo(parts[0]); // live
@@ -148,11 +137,9 @@ function loadDefault() {
     const custom = {
       id: "10001",
       name: "1kball 5D 1m",
-      details:
-        "1kball 5D 1m rules: daily 1380 00:00-23:59 1 minute period, maintenance time GMT+8 05:00-06:00 am",
+      details: "1kball 5D 1m rules: daily 1380 00:00-23:59 1 minute period, maintenance time GMT+8 05:00-06:00 am"
     };
-    const storedGame =
-      localStorage.getItem("gameId") ?? JSON.stringify(custom);
+    const storedGame = localStorage.getItem("gameId") ?? JSON.stringify(custom);
     let json = JSON.parse(storedGame);
     //console.log(storedGame);
     gameDatas = map.get(`${json.id}`);
@@ -167,7 +154,7 @@ function loadDefault() {
       "Today's Date": "2025-05-09",
       "Data" : cleanedData.slice(0, 10)
     };
-    const obj = JSON.stringify(apis, null, 8);
+    const obj = JSON.stringify(apis, null, 5);
     $("#api_result").html("<pre>" + obj + "</pre>");
     liveDrawWss(json.id);
     liveVideo(json.id); // live
@@ -180,6 +167,7 @@ function loadDefault() {
   default_socket.onopen = () => {
     console.log("Connected to draw get_all WebSocket");
   };
+
 }
 
 function liveDrawWss(gameId = 10001) {
@@ -218,7 +206,7 @@ function liveDrawWss(gameId = 10001) {
       "Data" : cleanedDatas.slice(0, 10)
     };
     //console.log(gameDatas);
-      const obj = JSON.stringify(liveapi, null, 8);
+      const obj = JSON.stringify(liveapi, null, 5);
       $("#api_result").html("<pre>" + obj + "</pre>");
     } else {
       if (data.result == "live") {
